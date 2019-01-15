@@ -60,6 +60,18 @@ static void generate_input(int *array, int n) {
 static void sort_input(int *array,  int n) {
     
     // It's your job to implement this simple bubble sort routine
+  int swap = TRUE;
+  while(swap) {
+    swap = FALSE;
+    for(int i = 1; i < n; ++i) {
+      if(array[i]<array[i-1]) {
+	int temp = array[i];
+	array[i] = array[i-1];
+	array[i-1] = temp;
+	swap = TRUE;
+      }
+    }
+  }
 }
 
 /**
